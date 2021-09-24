@@ -13,7 +13,7 @@ export class CreateComponent implements OnInit {
 
   constructor(private store: Store<AppState>) { }
 
-  addTutorial(name, url) {
+  addTutorial(name: string, url: string) {
     this.store.dispatch(new TutorialActions.AddTutorial({name: name, url: url})) // component dispara ação
   }
 

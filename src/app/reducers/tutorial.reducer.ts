@@ -1,4 +1,4 @@
-import { Action } from '@ngrx/store';
+// import { Action } from '@ngrx/store';
 import { Tutorial } from './../models/tutorial.model';
 import * as TutorialActions from './../actions/tutorial.actions';
 
@@ -8,7 +8,7 @@ const initialState: Tutorial = {
     url: 'http://google.com'
 }
 
-export function reducer(state: Tutorial[] = [initialState], action: TutorialActions.Actions ) {
+export function reducer(state: Tutorial[] = [initialState], action: TutorialActions.Actions) {
 
     switch(action.type) {
         case TutorialActions.ADD_TUTORIAL:
@@ -17,7 +17,6 @@ export function reducer(state: Tutorial[] = [initialState], action: TutorialActi
         case TutorialActions.REMOVE_TUTORIAL:
             state.splice(action.payload, 1)
             return state;
-
         default:
             return state;
     }

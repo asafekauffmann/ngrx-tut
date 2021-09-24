@@ -23,7 +23,7 @@ export class ReadComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  delTutorial(index) {
+  delTutorial(index: any) {
     this.store.dispatch(new TutorialActions.RemoveTutorial(index))
   }
 
